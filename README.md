@@ -4,7 +4,16 @@ Shell script for exporting Markdown to .docx via `pandoc`, to be copied into PDF
 
 This is full of filthy hacks to get around not having a coherent pipeline from plaintext .md into afpub.
 
-It runs `sed` a bunch of times to preserve MD/HTML styling by dropping special chars into the text, so that a search-and-replace can apply styles.
+## special chars
+
+After running `pandoc` to get HTML, the script runs `sed` repeatedly to preserve HTML styling by dropping special chars into the text, so that a search-and-replace can apply styles:
+
+* ¢ : section
+* ¥ : blockquote
+* ¤ : superscript
+* £ : h2
+
+Then remove by searching for `¢` and replace with `\1`, which means "first group", but since there is no group `()` in the query, an empty string is inserted along with the styling, which is what we wanted.
 
 ## requirements
 

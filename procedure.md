@@ -1,36 +1,10 @@
-# Document Preparation Procedure
-
-# Prior to assembly
-
-## Replace > tags with code indent for line breaks
-
-> blockquote.
-
-fails where I want line breaks. Such as in poems and Chinese.
-
-Convert to indent in these cases to get `<pre><code>`
-
-<!-- TODO: find a way to encode blockquote source -->
-<!-- like >> foo -->
-
----
+# Procedure
 
 # run
 
 run from project root:
 
     ./mdout/run.sh foo.md
-
-## Tag content special chars
-
-* ¢ : section
-* ¥ : blockquote
-* ¤ : superscript
-* £ : h2
-
-This circumvents the problem of losing tag information when I remove styling in AFP. I use unusual characters to mark tag content, then run a Find and Replace in AFP, applying appropriate styling. Then just remove the characters with a `\1` replace without any group `()`.
-
----
 
 # Copy into AFP
 
@@ -44,11 +18,17 @@ This circumvents the problem of losing tag information when I remove styling in 
 
 5. Apply Body to everything
 
+6. Chapter title master
+
+7. Chapter title style
+
+8. Drop caps to first paragraph
+
 <!-- NOTE: when mass copying, stop and iterate at this point -->
 
-6. Delete unused styles
+9. Delete unused styles
 
-7. Search and replace in AFP.
+10. Search and replace in AFP.
 
 ## Find and apply auto_numbered_section
 
@@ -113,9 +93,6 @@ NOTE: usually none
 
 ---
 
-# Chapter title master
-
-# Apply drop caps to first paragraph of every chapter
 
 # Fix sections and page ranges
 
