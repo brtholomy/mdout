@@ -17,5 +17,12 @@ mdout/sed.sh $PDHTMLOUT > $SEDHTMLOUT
 # convert html to docx
 pandoc -f html -t docx $SEDHTMLOUT -o $DOCXOUT
 
-# open it
-open $DOCXOUT
+# so open works on Arch:
+OPENCMD='open'
+if ! command -v $OPENCMD 2>&1 >/dev/null
+then
+    echo "open not found, using xdg-open"
+    OPENCMD='xdg-open'
+fi
+
+$OPENCMD $DOCXOUT
