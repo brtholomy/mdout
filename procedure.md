@@ -44,6 +44,8 @@ run from project root:
 
 ### Find and apply list short
 
+NOTE: I may forgo this in TMD. It's a nuissance and not necessary.
+
 <!-- TODO: change these to FORMAT -->
 
 Look for these:
@@ -58,6 +60,8 @@ Look for these:
 
 ### Apply list numbered short
 
+NOTE: same. better to consolidate on one style.
+
 <!-- TODO: list numbered short -->
 
 ## Find and apply blockquote
@@ -66,6 +70,8 @@ Look for these:
 \1
 
 ### Find and apply blockquote source
+
+TODO: fix this with a routine to find <blockquote><blockquote> and insert something.
 
 Just search using blockquote
 
