@@ -81,13 +81,22 @@ Just search using blockquote
 
 <!-- TODO: blockquote poem -->
 
+### blockquote poem right align
+
+right align the very short ones:
+
+* Byrne
+* Barret
+
 ## Fix "Verbatim Char" which ODT/DOCX will insert
 
 replace with "inline code" char style
 
+NOTE: but for blockquote sections, these are either English in Body or Chinese.
+
 ## Find and apply <sup>
 
-NOTE: usually none
+NOTE: left as is in TMD. Will just fallback.
 
 ¤
 \1
@@ -112,13 +121,21 @@ Chinese: PingFang TC, 10pt.
 
 Japanese: Mincho
 
+Hebrew: must be reversed manually.
+
+Cuneiform : Noto Sans Cuneiform
+
+Gothic : Noto Sans Gothic
+
+Sanskrit : any with ligatures must be inserted as vectors.
+
 # Remove original languages in body Blockquotes
 
 Leave originals only for Chapter quotations.
 
 Except for Chinese.
 
-# NOTE
+# Smart chars : left as is
 
 allowed single char ellipses: …
 
