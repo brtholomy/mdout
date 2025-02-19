@@ -96,7 +96,7 @@ NOTE: but for blockquote sections, these are either English in Body or Chinese.
 
 ## Find and apply <sup>
 
-NOTE: left as is in TMD. Will just fallback.
+NOTE: failed to show up for some reason, <sup> tag proceeds through rich text formatting though.
 
 ¤
 \1
@@ -117,17 +117,19 @@ NOTE: left as is in TMD. Will just fallback.
 
 # Fix font failures
 
-Chinese: PingFang TC, 10pt.
+Chinese : PingFang TC, 10pt.
 
-Japanese: Mincho
-
-Hebrew: must be reversed manually.
+Japanese : Mincho
 
 Cuneiform : Noto Sans Cuneiform
 
 Gothic : Noto Sans Gothic
 
+## Fix fonts manually
+
 Sanskrit : any with ligatures must be inserted as vectors.
+
+Hebrew : must be reversed manually. NOTE that git diff will display RTL languages wrong, while emacs will be correct. Export and check with a browser to be sure.
 
 # Remove original languages in body Blockquotes
 
