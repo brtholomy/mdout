@@ -71,9 +71,8 @@ NOTE: same. better to consolidate on one style.
 
 ### Find and apply blockquote source
 
-TODO: fix this with a routine to find <blockquote><blockquote> and insert something.
-
-Just search using blockquote
+₱
+\1
 
 ## Fix <pre> blocks
 

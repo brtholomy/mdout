@@ -42,6 +42,15 @@ SEDTO=' – '
 
 bth_runsed
 
+# blockquote source
+# I mark source in markdown with a double:
+# >>
+SEDFROM='<blockquote><blockquote><p>'
+# NOTE: the extra  to distinguish from single blockquote:
+SEDTO='<blockquote><blockquote><p>₱'
+
+bth_runsed
+
 # blockquote
 # note the literal \v : i think \v only works in sed within ""
 SEDFROM='<blockquote><p>'
