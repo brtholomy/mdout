@@ -10,6 +10,7 @@ After running `pandoc` to get HTML, the script runs `sed` repeatedly to preserve
 
 * ¢ : section
 * ¥ : blockquote
+* ₱ : blockquote source
 * ¤ : superscript
 * £ : h2
 
