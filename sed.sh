@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # run sed on pandoc .html output
 
 # piping cat like this and then writing to the file will end up with an empty
@@ -18,7 +20,7 @@ bth_runsed () {
     cat $SEDIN | tr '\n' '\v' > $SEDOUT
     cat $SEDOUT > $SEDIN
 
-    cat $SEDIN | sed "s/$SEDFROM/$SEDTO/g" > $SEDOUT
+    cat $SEDIN | sed "s/$SEDRX/$SEDTX/g" > $SEDOUT
     cat $SEDOUT > $SEDIN
 
     cat $SEDIN | tr '\v' '\n' > $SEDOUT
@@ -28,60 +30,54 @@ bth_runsed () {
 ####################
 # replacements
 
-# section
-SEDFROM='<hr \/>'
-SEDTO='<p>¢<\/p>'
+# two parallel arrays, since bash 3 on OSX lacks associative arrays. And this is
+# just simpler in bash anyway.
+declare SEDFR=()
+declare SEDTO=()
 
-bth_runsed
+# section
+SEDFR+=('<hr \/>')
+SEDTO+=('<p>¢<\/p>')
 
 # EN dash
 # NOTE: pandoc will insert newlines in the html unless --wrap=none is given.
-SEDFROM=' - '
-SEDTO=' – '
-
-bth_runsed
+SEDFR+=(' - ')
+SEDTO+=(' – ')
 
 # blockquote source
 # I mark source in markdown with a double:
 # >>
 # NOTE: the literal \v : i think \v only works in sed within ""
-SEDFROM='<blockquote><blockquote><p>'
+SEDFR+=('<blockquote><blockquote><p>')
 # NOTE: the extra  to prevent matching again:
-SEDTO='<blockquote><blockquote><p>₱'
-
-bth_runsed
+SEDTO+=('<blockquote><blockquote><p>₱')
 
 # blockquote
-SEDFROM='<blockquote><p>'
-SEDTO='<blockquote><p>¥'
-
-bth_runsed
+SEDFR+=('<blockquote><p>')
+SEDTO+=('<blockquote><p>¥')
 
 # code block indent
-SEDFROM='<pre><code><p>'
-SEDTO='<pre><code><p>¥'
-
-bth_runsed
+SEDFR+=('<pre><code><p>')
+SEDTO+=('<pre><code><p>¥')
 
 # superscript
-SEDFROM='<sup>'
-SEDTO='<sup>¤'
-
-bth_runsed
+SEDFR+=('<sup>')
+SEDTO+=('<sup>¤')
 
 # footnote back anchor.
 # FIXME: don't know why this regex fails:
-# SEDFROM='<a*.*? class=\"footnote-back\" role=\"doc-backlink\">↩︎<\/a>'
-# SEDTO=''
-SEDFROM='↩︎'
-SEDTO=''
+# SEDFR+=('<a*.*? class=\"footnote-back\" role=\"doc-backlink\">↩︎<\/a>')
+SEDFR+=('↩︎')
+SEDTO+=('')
 
-bth_runsed
+SEDFR+=('<h2>')
+SEDTO+=('<h2>£')
 
-SEDFROM='<h2>'
-SEDTO='<h2>£'
-
-bth_runsed
+for i in "${!SEDFR[@]}"; do
+    SEDRX="${SEDFR[i]}"
+    SEDTX="${SEDTO[i]}"
+    bth_runsed
+done
 
 ####################
 # output
