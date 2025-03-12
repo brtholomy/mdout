@@ -21,7 +21,7 @@ mdout/prep.sh $RUNIN > $PREPOUT
 pandoc --wrap=none -f markdown-auto_identifiers -t html $PREPOUT -o $PDHTMLOUT
 
 # mark tags with special chars
-mdout/sed.sh $PDHTMLOUT > $SEDHTMLOUT
+mdout/html.sh $PDHTMLOUT > $SEDHTMLOUT
 
 # convert html to docx
 pandoc -f html -t docx $SEDHTMLOUT -o $DOCXOUT
