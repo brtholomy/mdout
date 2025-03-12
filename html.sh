@@ -2,7 +2,7 @@
 
 # run sed on pandoc .html output
 
-source mdout/sed.sh
+source $(dirname ${BASH_SOURCE-$0})/sed.sh
 
 SEDIN='/tmp/in.html'
 SEDOUT='/tmp/out.html'

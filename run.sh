@@ -13,7 +13,7 @@ DOCXOUT=/tmp/$1.docx
 # NOTE: would rather not have to do any preprocessing to markdown source, and
 # rely on the parser, but not everything can be solved with html tagging. Unless
 # I move to a completely different approach, like Go's goquery for nested tags.
-mdout/prep.sh $RUNIN > $PREPOUT
+$(dirname ${BASH_SOURCE-$0})/prep.sh $RUNIN > $PREPOUT
 
 # convert md to html, store in tmp
 # NOTE: extension auto_identifiers disabled so that <h2> is plain
@@ -21,7 +21,7 @@ mdout/prep.sh $RUNIN > $PREPOUT
 pandoc --wrap=none -f markdown-auto_identifiers -t html $PREPOUT -o $PDHTMLOUT
 
 # mark tags with special chars
-mdout/html.sh $PDHTMLOUT > $SEDHTMLOUT
+$(dirname ${BASH_SOURCE-$0})/html.sh $PDHTMLOUT > $SEDHTMLOUT
 
 # convert html to docx
 pandoc -f html -t docx $SEDHTMLOUT -o $DOCXOUT

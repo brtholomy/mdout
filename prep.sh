@@ -1,6 +1,8 @@
 #!/bin/bash
 
-source mdout/sed.sh
+# preprocess markdown before pandoc rendering.
+
+source $(dirname ${BASH_SOURCE-$0})/sed.sh
 
 SEDIN='/tmp/tmp_prep.md'
 SEDOUT='/tmp/tmp_prepout.md'
