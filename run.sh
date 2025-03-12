@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # intended to be run from the project root. eg:
 # mdout/run.sh 000.preface.md
