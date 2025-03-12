@@ -35,9 +35,8 @@ SEDTO='<p>¢<\/p>'
 bth_runsed
 
 # EN dash
-# NOTE: pandoc inserts newlines in the html, this can break at the dash, such
-# that sed won't find it:
-SEDFROM=' -[ ]'
+# NOTE: pandoc will insert newlines in the html unless --wrap=none is given.
+SEDFROM=' - '
 SEDTO=' – '
 
 bth_runsed
@@ -45,16 +44,16 @@ bth_runsed
 # blockquote source
 # I mark source in markdown with a double:
 # >>
+# NOTE: the literal \v : i think \v only works in sed within ""
 SEDFROM='<blockquote><blockquote><p>'
-# NOTE: the extra  to distinguish from single blockquote:
+# NOTE: the extra  to prevent matching again:
 SEDTO='<blockquote><blockquote><p>₱'
 
 bth_runsed
 
 # blockquote
-# note the literal \v : i think \v only works in sed within ""
 SEDFROM='<blockquote><p>'
-SEDTO='<blockquote><p>¥'
+SEDTO='<blockquote><p>¥'
 
 bth_runsed
 

@@ -9,7 +9,8 @@ DOCXOUT=/tmp/$1.docx
 
 # convert md to html, store in tmp
 # NOTE: extension auto_identifiers disabled so that <h2> is plain
-pandoc -f markdown-auto_identifiers -t html $1 -o $PDHTMLOUT
+# NOTE: --wrap=none so html has no non-semantic newlines.
+pandoc --wrap=none -f markdown-auto_identifiers -t html $1 -o $PDHTMLOUT
 
 # mark tags with special chars
 mdout/sed.sh $PDHTMLOUT > $SEDHTMLOUT
