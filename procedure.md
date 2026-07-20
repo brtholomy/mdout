@@ -123,9 +123,11 @@ NOTE: failed to show up for some reason, `<sup>` tag proceeds through rich text 
 
 ## Fix TOC
 
-## Fix missing fonts with styles
+## Fix missing fonts with character styles
 
-* Chinese : PingFang TC, 10pt.
+https://github.com/adobe-fonts/source-han-serif/tree/release#downloading-source-han-serif
+
+* Chinese : Source Han Serif TC VF : Traditional Variable-width : 思源宋體
 * Japanese : Mincho
 * Cuneiform : Noto Sans Cuneiform
 * Gothic : Noto Sans Gothic
