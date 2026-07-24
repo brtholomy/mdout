@@ -132,6 +132,13 @@ NOTE: failed to show up for some reason, `<sup>` tag proceeds through rich text 
 $0
 ```
 
+hex ranges may not work reliably. alternative to rely on the Han script property and specify punctuation:
+
+```
+[\p{Han}，。？！、：；「」《》]+
+$0
+```
+
 NOTE: if i want to switch to a preprocess method:
 
 ```
