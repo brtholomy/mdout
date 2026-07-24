@@ -125,9 +125,13 @@ NOTE: failed to show up for some reason, `<sup>` tag proceeds through rich text 
 
 ## Fix missing fonts with character styles
 
-https://github.com/adobe-fonts/source-han-serif/tree/release#downloading-source-han-serif
+NOTE: variable-width fonts will break afpub export, because the embed font:subset option, which embeds only those glyphs used, involves some crazy calculus when the font is variable-width. must use static-width fonts.
 
-* Chinese : Source Han Serif TC VF : Traditional Variable-width : 思源宋體
+https://github.com/adobe-fonts/source-han-serif/tree/release#otcs
+
+NOTE: therefore, went back to OSX system fonts, which really are fine.
+
+* Chinese : Songti TC
 * Japanese : Mincho
 * Cuneiform : Noto Sans Cuneiform
 * Gothic : Noto Sans Gothic
