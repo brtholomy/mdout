@@ -132,10 +132,16 @@ NOTE: failed to show up for some reason, `<sup>` tag proceeds through rich text 
 $0
 ```
 
-hex ranges may not work reliably. alternative to rely on the Han script property and specify punctuation:
+and to get all ranges with rare chars:
 
 ```
-[\p{Han}，。？！、：；「」《》]+
+[\x{4E00}-\x{9FFF}\x{3400}-\x{4DBF}\x{20000}-\x{2EBEF}\x{F900}-\x{FAFF}\x{2E80}-\x{2EFF}\x{2F00}-\x{2FDF}\x{3000}-\x{303F}\x{FF00}-\x{FFEF}]+
+```
+
+those hex ranges should catch all punctuation. if not, specify:
+
+```
+[，。？！、：；「」《》]+
 $0
 ```
 
