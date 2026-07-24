@@ -17,4 +17,7 @@ SEDTX='>>¥'
 
 bth_runsed
 
+# TODO: test this as an alternative to another replace routine:
+# perl -CSD -pe 's/([\p{Han}\x{3000}-\x{303F}\x{FF00}-\x{FFEF}]+)/[$1]{custom-style="Chinese"}/g' $SEDIN > $SEDOUT
+
 cat $SEDOUT

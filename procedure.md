@@ -125,6 +125,30 @@ NOTE: failed to show up for some reason, `<sup>` tag proceeds through rich text 
 
 ## Fix missing fonts with character styles
 
+### Chinese
+
+```
+[\x{4E00}-\x{9FFF}\x{3000}-\x{303F}\x{FF00}-\x{FFEF}]+
+$0
+```
+
+NOTE: if i want to switch to a preprocess method:
+
+```
+perl -CSD -pe 's/([\p{Han}\x{3000}-\x{303F}\x{FF00}-\x{FFEF}]+)/[$1]{custom-style="Chinese"}/g' input.md > processed.md
+```
+
+### Japanese
+
+NOTE: but this will match the core CJK range as Japanese. Use with caution. Or only use the first and last ranges:
+
+```
+[\x{3000}-\x{30FF}\x{4E00}-\x{9FFF}\x{FF00}-\x{FFEF}]+
+$0
+```
+
+### font choices
+
 NOTE: variable-width fonts will break afpub export, because the embed font:subset option, which embeds only those glyphs used, involves some crazy calculus when the font is variable-width. must use static-width fonts.
 
 https://github.com/adobe-fonts/source-han-serif/tree/release#otcs
