@@ -1,0 +1,107 @@
+NOTE: the Base style includes all the afpub defaults, meaning much of it is probably meaningless to Typst. Try to find only the relevant settings, such as the hyphenation settings, Leading, Space after, etc.
+
+---
+
+Base
+
+Font: Athelas; Font size: 10.5 pt; Tracking: 0 ‰; Baseline advance: 0 pt; Default kern: on; X offset: 0 pt; Y offset: 0 pt; Scale X: 100 %; Scale Y: 100 %; Font shear: 0 °; Leading override: 0 pt; Underline: None; Strikethrough: None; No superscript/subscript; No caps; Leading override: auto; Typography script: Auto; Typography language: Auto; Optical alignment: None; No break: off; Spelling language: English (United States); Hyphenation language: Auto; Font color: C:0 M:0 Y:0 K:100; Character outline fill: none; Character outline: none; Character transparency: none; Background color: none; Underline color: none; Strikethrough color: none; Optical alignment values; OpenType: reset; Align paragraph: Left; Leading mode: % ideal; Start: Anywhere; Keep with previous: Off; Keep with next: 0; Keep together: Off; Prevent widows: Off; Prevent orphans: Off; Align to baseline grid: On; Auto hyphenation: Off; Hyphenate minimum length: 5; Hyphenate after first: 2 letters; Hyphenate before last: 2 letters; Maximum consecutive hyphens: Unlimited; Only between Paragraphs; Use space between same styles: Off; Use larger of space before and after; Leading: 115 %; Left indent: 0 in; Right indent: 0 in; First line indent: 0 in; Space before: 0 pt; Space after: 12 pt; Default tab stops: 0.5 in; Minimum word spacing: 80 %; Desired word spacing: 100 %; Maximum word spacing: 133 %; Minimum letter spacing: 0 %; Desired letter spacing: 0 %; Maximum letter spacing: 0 %; Minimum hyphen score: 0.0; Hyphenation zone: 0 in; Hyphenation - Capital zone: 0 in; Hyphenation - Paragraph end zone: 0 in; Hyphenation - Column end zone: 0 in; Last line outdent: 0 in; Space between same styles: 0 pt; Tab stops: None; Paragraph decorations; List: None; List bullet string: "•\t"; List character style: ""; List tab stop indent: 0 in; List alignment: Left; Drop cap: Off; Drop cap height: 3; Drop cap characters: 1; Drop cap auto characters: On; Drop cap align left: Off; Drop cap scale descenders: Off; Drop cap text distance: 0 pt; Drop cap style: ""; Initial words: Off; Initial words count: 3; Initial words end characters: .?!:; Initial words style: ""
+
+---
+
+Body
+
+Base + Justify paragraph: Last line left; Prevent widows: On; Prevent orphans: On; Auto hyphenation: On; Hyphenate minimum length: 8; Hyphenate after first: 3 letters; Hyphenate before last: 3 letters; Maximum consecutive hyphens: 1; Maximum word spacing: 104.5 %; Minimum hyphen score: 1.0
+
+---
+
+Blockquote
+
+Body + Font size: 10 pt; Justify paragraph: Last line left; Left indent: 0.4 in; Right indent: 0.4 in; First line indent: 0.4 in; Space after: 6 pt; Last line outdent: 0.4 in
+
+---
+
+Blockquote source
+
+Blockquote + Align paragraph: Right; Keep with previous: On; Use sum of space before and after; Space after: 12 pt
+
+---
+
+Body dropcap
+
+Body + Drop cap: On; Drop cap height: 2; Drop cap text distance: 2.2 pt
+
+---
+
+Chapter title
+
+Base + Next: Blockquote; Next level: Section number; Font size: 24 pt; All caps; Align paragraph: Center; Only at Column Top; Space before: 24 pt; Space after: 24 pt
+
+---
+
+Chapter header
+
+Base + Font size: 9 pt; Tracking: 14 ‰; Scale Y: 91 %; All caps; Align paragraph: Center
+
+---
+
+Heading 2
+
+Chapter header + Next: Body; Font size: 13 pt; Keep with next: 1; Always; Space before: 21 pt; Paragraph decorations
+
+---
+
+Part title
+
+Chapter title + Next level: Chapter title; Font size: 36 pt; Align paragraph: Center; Leading mode: % ideal; Leading: 110 %
+
+---
+
+Section number
+
+Body + Align paragraph: Center; Keep with next: 1; Space before: 24 pt; Space after: 12 pt
+
+---
+
+section_number_auto
+
+Section number + List: Number; List number string: "- \# -"; List alignment: Center; List name: ""; List global numbering: On; List start numbering at: 0; List restart numbering mode: Below Current Level
+
+---
+
+List long
+
+Body + Next level: Bullet 2; Font: Athelas; List: Bullet; List bullet string: "⇁\t"; List character style: "bullet char"; List tab stop indent: 0.2 in
+
+---
+
+List short
+
+List long + Use space between same styles: On; Space between same styles: 4 pt
+
+---
+
+List numbered
+
+Body + Default tab stops: 0.2 in; List: Number; List format: 0; List number string: "\#.\t"
+
+---
+
+List numbered short
+
+List numbered + Use space between same styles: On; Space between same styles: 4 pt
+
+---
+
+NOTE: inline character style
+
+Chinese
+
+Font: Songti TC; Font size: 10.5 pt
+
+---
+
+NOTE: inline character style
+
+inline_code
+
+Base + Font: Courier New; Background color: H:0 S:0 L:87
