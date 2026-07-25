@@ -9,6 +9,13 @@ function HorizontalRule(el)
     return pandoc.Div({empty_para}, {['custom-style'] = "section_number_auto"})
 end
 
+function Code(el)
+    -- NOTE: must be Span
+    -- NOTE: We pass {el} as a list to keep the text intact.
+    -- TODO: this should be default. modify VerbatimChar to be what we expect.
+    return pandoc.Span({el}, {['custom-style'] = "VerbatimChar"})
+end
+
 function BulletList(el)
   for i, item in ipairs(el.content) do
     for j, block in ipairs(item) do
