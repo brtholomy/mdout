@@ -667,38 +667,38 @@
     <w:basedOn w:val="Body" />
     <w:qFormat />
   </w:style>
-  <w:style w:type="paragraph" w:customStyle="1" w:styleId="Blockquote source">
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="Blockquotesource">
     <w:name w:val="Blockquote source" />
     <w:basedOn w:val="Blockquote" />
     <w:qFormat />
   </w:style>
-  <w:style w:type="paragraph" w:customStyle="1" w:styleId="List long">
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="Listlong">
     <w:name w:val="List long" />
     <w:basedOn w:val="Body" />
     <w:qFormat />
   </w:style>
-  <w:style w:type="paragraph" w:customStyle="1" w:styleId="List short">
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="Listshort">
     <w:name w:val="List short" />
-    <w:basedOn w:val="List long" />
+    <w:basedOn w:val="Listlong" />
     <w:qFormat />
   </w:style>
-f  <w:style w:type="paragraph" w:customStyle="1" w:styleId="List numbered">
+f  <w:style w:type="paragraph" w:customStyle="1" w:styleId="Listnumbered">
     <w:name w:val="List numbered" />
     <w:basedOn w:val="Body" />
     <w:qFormat />
   </w:style>
-  <w:style w:type="paragraph" w:customStyle="1" w:styleId="List numbered short">
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="Listnumberedshort">
     <w:name w:val="List numbered short" />
-    <w:basedOn w:val="List numbered" />
+    <w:basedOn w:val="Listnumbered" />
     <w:qFormat />
   </w:style>
-  <w:style w:type="paragraph" w:customStyle="1" w:styleId="Section number">
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="Sectionnumber">
     <w:name w:val="Section number" />
     <w:qFormat />
   </w:style>
   <w:style w:type="paragraph" w:customStyle="1" w:styleId="section_number_auto">
     <w:name w:val="section_number_auto" />
-    <w:basedOn w:val="Section number" />
+    <w:basedOn w:val="Sectionnumber" />
     <w:qFormat />
   </w:style>
   <w:style w:type="paragraph" w:customStyle="1" w:styleId="SourceCode">
