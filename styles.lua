@@ -15,16 +15,16 @@ function BulletList(el)
 
       -- If Para ran first, this block is now a Div.
       if block.t == "Div" and block.attributes['custom-style'] == "Body" then
-        block.attributes['custom-style'] = "list_long"
+        block.attributes['custom-style'] = "List long"
 
       -- fallback if it's still a raw Para or Plain
       elseif block.t == "Para" then
-        item[j] = pandoc.Div({block}, {['custom-style'] = "list_long"})
+        item[j] = pandoc.Div({block}, {['custom-style'] = "List long"})
       elseif block.t == "Plain" then
         -- upgrade "tight" lists to paragraphs
         local upgraded_para = pandoc.Para(block.content)
         -- apply short style:
-        item[j] = pandoc.Div({upgraded_para}, {['custom-style'] = "list_short"})
+        item[j] = pandoc.Div({upgraded_para}, {['custom-style'] = "List short"})
       end
     end
   end
@@ -35,15 +35,15 @@ function OrderedList(el)
   for i, item in ipairs(el.content) do
     for j, block in ipairs(item) do
       if block.t == "Div" and block.attributes['custom-style'] == "Body" then
-        block.attributes['custom-style'] = "numbered_list_long"
+        block.attributes['custom-style'] = "List numbered"
       elseif block.t == "Para" then
-        item[j] = pandoc.Div({block}, {['custom-style'] = "numbered_list_long"})
+        item[j] = pandoc.Div({block}, {['custom-style'] = "List numbered"})
 
       elseif block.t == "Plain" then
         -- Upgrade "tight" lists to paragraphs
         local upgraded_para = pandoc.Para(block.content)
         -- apply short style:
-        item[j] = pandoc.Div({upgraded_para}, {['custom-style'] = "numbered_list_short"})
+        item[j] = pandoc.Div({upgraded_para}, {['custom-style'] = "List numbered short"})
       end
 
     end
@@ -74,7 +74,7 @@ function BlockQuote(el)
     -- We loop through it and overwrite it with your citation style.
     for i, block in ipairs(inner_quote.content) do
       if block.t == "Div" and block.attributes['custom-style'] == "Blockquote" then
-        block.attributes['custom-style'] = "Citation"
+        block.attributes['custom-style'] = "Blockquote source"
       end
     end
 
