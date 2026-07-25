@@ -682,7 +682,7 @@
     <w:basedOn w:val="Listlong" />
     <w:qFormat />
   </w:style>
-f  <w:style w:type="paragraph" w:customStyle="1" w:styleId="Listnumbered">
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="Listnumbered">
     <w:name w:val="List numbered" />
     <w:basedOn w:val="Body" />
     <w:qFormat />
@@ -694,6 +694,7 @@ f  <w:style w:type="paragraph" w:customStyle="1" w:styleId="Listnumbered">
   </w:style>
   <w:style w:type="paragraph" w:customStyle="1" w:styleId="Sectionnumber">
     <w:name w:val="Section number" />
+    <w:basedOn w:val="Body" />
     <w:qFormat />
   </w:style>
   <w:style w:type="paragraph" w:customStyle="1" w:styleId="section_number_auto">
