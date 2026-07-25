@@ -653,14 +653,18 @@
       <w:color w:themeColor="accent1" w:themeShade="BF" w:val="365F91" />
     </w:rPr>
   </w:style>
-  <w:style w:type="paragraph" w:customStyle="1" w:styleId="Blockquote">
-    <w:name w:val="Blockquote" />
-    <w:basedOn w:val="Body" />
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="Base">
+    <w:name w:val="Base" />
     <w:qFormat />
   </w:style>
   <w:style w:type="paragraph" w:customStyle="1" w:styleId="Body">
     <w:name w:val="Body" />
     <w:basedOn w:val="Base" />
+    <w:qFormat />
+  </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="Blockquote">
+    <w:name w:val="Blockquote" />
+    <w:basedOn w:val="Body" />
     <w:qFormat />
   </w:style>
   <w:style w:type="paragraph" w:customStyle="1" w:styleId="Blockquote source">
@@ -688,13 +692,17 @@ f  <w:style w:type="paragraph" w:customStyle="1" w:styleId="List numbered">
     <w:basedOn w:val="List numbered" />
     <w:qFormat />
   </w:style>
+  <w:style w:type="paragraph" w:customStyle="1" w:styleId="Section number">
+    <w:name w:val="Section number" />
+    <w:qFormat />
+  </w:style>
   <w:style w:type="paragraph" w:customStyle="1" w:styleId="section_number_auto">
     <w:name w:val="section_number_auto" />
     <w:basedOn w:val="Section number" />
     <w:qFormat />
   </w:style>
   <w:style w:type="paragraph" w:customStyle="1" w:styleId="SourceCode">
-    <w:name w:val="Base" />
+    <w:name w:val="SourceCode" />
     <w:basedOn w:val="Normal" />
     <w:link w:val="VerbatimChar" />
     <w:pPr>
